@@ -1,0 +1,265 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+  color: white;
+}
+
+:root {
+  --color-blue: #1e56a0;
+  --color-dark-blue: #163172;
+  --color-light-blue: #3f98ff;
+  --color-white: #ffffff;
+}
+
+body {
+  background-color: var(--color-blue);
+}
+
+.navbar {
+  background-color: var(--color-dark-blue);
+}
+
+.logo {
+  color: var(--color-white);
+  font-weight: 700;
+  font-size: 2rem;
+}
+.logo:hover {
+  color: #cecece;
+}
+.btn {
+  color: white;
+  border-color: #ffffff;
+}
+.user-icon {
+  display: none;
+}
+
+.nav-link {
+  color: var(--color-white);
+}
+
+.nav-link:hover {
+  color: #cecece;
+}
+
+/* -------------------Main-------------------------- */
+
+.main-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.page-title {
+  grid-column: 1/7;
+  font-size: 4.5vmin;
+  margin: 15px;
+}
+
+.patrimonio-container {
+  grid-column: 1/3;
+  margin-left: 15px;
+  position: relative;
+  top: 30px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  font-weight: 700;
+  font-size: 6vmin;
+}
+
+p {
+  line-height: 0.9rem;
+  text-align: center;
+  font-family: "Ubuntu Condensed", sans-serif;
+  font-weight: 300;
+  font-size: 3vmin;
+}
+
+.resultados {
+  position: relative;
+  top: 40vmin;
+  grid-column: 1/7;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: -200px;
+  z-index: 1;
+}
+
+.grafico {
+  width: 100%;
+}
+
+.grafico-container {
+  grid-column: 1/7;
+}
+
+.renda-container {
+  grid-column: 1/2;
+}
+
+.gastos-container {
+  grid-column: 2/3;
+}
+
+.lucros-container {
+  grid-column: 1/3;
+}
+
+.renda-container:hover,
+.gastos-container:hover,
+.lucros-container:hover {
+  color: #f3f2f2;
+}
+
+.resultados h2 {
+  font-size: 4.5vmin;
+}
+
+/* --------------------------Section-------------------------------------------- */
+
+.cards-group {
+  grid-column: 1/7;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  margin-bottom: 50px;
+}
+
+.card {
+  margin: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  text-align: center;
+}
+
+.card:hover h3 {
+  background-color: #f3f2f2;
+  color: var(--color-light-blue);
+}
+
+h3 {
+  margin-bottom: 0;
+  font-weight: 700;
+  font-size: 4vmin;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.categoria {
+  grid-column: 1/2;
+  color: var(--color-dark-blue);
+}
+
+.educ-fin {
+  grid-column: 1/3;
+}
+
+.valor {
+  grid-column: 2/3;
+  color: var(--color-blue);
+}
+
+/*--------------------- Footerr ----------------------------------------------------*/
+
+footer {
+  background-color: var(--color-dark-blue);
+  color: var(--color-white);
+  padding: 45px;
+  font-family: "Ubuntu Condensed", sans-serif;
+}
+
+/* ---------------------------Media queries---------------------------------------------- */
+
+@media (min-width: 768px) {
+  h3 {
+    font-size: 24px;
+  }
+
+  .cards-group {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .card1 {
+    grid-column: 1/3;
+  }
+  .card2 {
+    grid-column: 3/5;
+  }
+  .card3 {
+    grid-column: 1/3;
+  }
+  .card4 {
+    grid-column: 3/5;
+  }
+  .card5 {
+    grid-column: 2/4;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar-nav {
+    align-items: center;
+  }
+
+  .nav-link {
+    font-size: 1.1rem;
+  }
+
+  .user-icon {
+    display: block;
+    font-size: 2.5rem;
+    margin-left: 20px;
+    right: 20px;
+  }
+
+  .perfil {
+    display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .cards-group {
+    grid-template-columns: repeat(6, 1fr);
+    position: relative;
+    top: -5vmin;
+  }
+
+  .card1 {
+    grid-column: 1/3;
+  }
+  .card2 {
+    grid-column: 3/5;
+  }
+  .card3 {
+    grid-column: 5/7;
+  }
+  .card4 {
+    grid-column: 2/4;
+  }
+  .card5 {
+    grid-column: 4/6;
+  }
+
+  .grafico-container {
+    position: relative;
+    top: -15vmin;
+  }
+
+  .grafico {
+    margin-bottom: -400px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .cards-group {
+    top: -30vmin;
+  }
+}
